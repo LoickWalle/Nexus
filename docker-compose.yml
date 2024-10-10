@@ -1,0 +1,43 @@
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"  # Changed port 8080 to 8081 on the host
+    depends_on:
+      - postgres-db
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+  spring-api:
+    build:
+      context: ./SpaceBack
+      dockerfile: Dockerfile
+    container_name: spring-api
+    ports:
+      - "8080:8080"  # Exposing the Spring Boot API on port 8080
+    depends_on:
+      - postgres-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+
+volumes:
+  postgres_data:
+  pgadmin_data:
