@@ -1,3 +1,7 @@
+# MCD du projet
+
+![Alt text](MCD.png)
+
 # Docker Setup for PostgreSQL and pgAdmin
 
 ## Start all containers
