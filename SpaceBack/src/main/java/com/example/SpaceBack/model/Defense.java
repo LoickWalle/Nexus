@@ -44,5 +44,6 @@ public class Defense {
     private int costEnergy;
 
 //    @OneToMany(mappedBy = "todo")
+//    @Builder.Default
 //    private Set<PlanetDefense> planetDefenses = new HashSet<>();
 }
