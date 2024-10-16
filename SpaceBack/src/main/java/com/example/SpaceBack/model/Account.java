@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
@@ -39,5 +40,5 @@ public class Account {
 
     @OneToMany(mappedBy = "owner")
     @Builder.Default
-    private Set<Planet> planetsOwned = new HashSet<>();
+    private Set<Planet> ownedPlanets = new HashSet<>();
 }

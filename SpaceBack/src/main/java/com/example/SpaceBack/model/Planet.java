@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -29,4 +31,8 @@ public class Planet {
 
     @ManyToOne
     private Account owner;
+
+    @OneToMany(mappedBy = "planet")
+    @Builder.Default
+    private Set<ConstructionQueue> constructionQueues = new HashSet<>();
 }
