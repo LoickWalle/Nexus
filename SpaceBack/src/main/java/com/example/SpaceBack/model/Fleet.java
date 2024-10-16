@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.UUID;
 
 @Data
@@ -32,7 +33,8 @@ public class Fleet {
     private LocalDate arrivalTime;
 
 //    @OneToMany(mappedBy = "fleet")
-//    private Set<FleetShip> fleetShips;
+//    @Builder.Default
+//    private Set<FleetShip> fleetShips = new HashSet<FleetShip>();
 
 
 }
