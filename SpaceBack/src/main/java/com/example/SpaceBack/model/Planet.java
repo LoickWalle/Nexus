@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -29,4 +30,7 @@ public class Planet {
 
     @ManyToOne
     private Account owner;
+
+    @OneToMany(mappedBy = "planet")
+    private Set<ConstructionQueue> constructionQueues;
 }

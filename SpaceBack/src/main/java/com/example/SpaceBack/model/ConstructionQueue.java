@@ -1,10 +1,7 @@
 package com.example.SpaceBack.model;
 
 import com.example.SpaceBack.utils.enums.ConstructionType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +23,8 @@ public class ConstructionQueue {
     private UUID idToBuild;
     private ConstructionType constructionType;
     @DateTimeFormat
-    private LocalDate endConstructionTime;
+    private LocalDate constructionEndTime;
+
+    @ManyToOne
+    private Planet planet;
 }
