@@ -38,5 +38,6 @@ public class Account {
     private String avatarUrl;
 
     @OneToMany(mappedBy = "owner")
-    private Set<Planet> planetsOwned;
+    @Builder.Default
+    private Set<Planet> planetsOwned = new HashSet<>();
 }
