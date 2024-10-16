@@ -34,7 +34,7 @@ public class Fleet {
 
 //    @OneToMany(mappedBy = "fleet")
 //    @Builder.Default
-//    private Set<FleetShip> fleetShips = new HashSet<FleetShip>();
+//    private Set<FleetShip> fleetShips = new HashSet<>();
 
 
 }
