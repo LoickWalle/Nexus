@@ -4,10 +4,14 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -33,6 +37,7 @@ public class Account {
     private LocalDate createdAt;
     private String avatarUrl;
 
-    //@OneToMany(mappedBy = "owner")
-    //private Set<Planet> planetsOwned;
+    @OneToMany(mappedBy = "owner")
+    @Builder.Default
+    private Set<Planet> planetsOwned = new HashSet<>();
 }
