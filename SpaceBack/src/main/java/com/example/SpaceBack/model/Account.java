@@ -40,5 +40,5 @@ public class Account {
 
     @OneToMany(mappedBy = "owner")
     @Builder.Default
-    private Set<Planet> planetsOwned = new HashSet<>();
+    private Set<Planet> ownedPlanets = new HashSet<>();
 }
