@@ -43,8 +43,8 @@ public class Ship {
     @PositiveOrZero
     private int costDeuterium;
 
-//    @OneToMany(mappedBy = "ship")
-//    @Builder.Default
-//    private Set<FleetShip> fleetShips = new HashSet<>();
+    @OneToMany(mappedBy = "ship")
+    @Builder.Default
+    private Set<FleetShip> fleetShips = new HashSet<>();
 
 }
