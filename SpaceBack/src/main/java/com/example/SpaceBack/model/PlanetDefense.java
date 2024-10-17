@@ -35,7 +35,6 @@ public class PlanetDefense {
     @Embeddable
     @NoArgsConstructor
     @AllArgsConstructor
-    @Builder
     public static class PlanetDefenseId implements Serializable {
 
         private UUID planetId;
