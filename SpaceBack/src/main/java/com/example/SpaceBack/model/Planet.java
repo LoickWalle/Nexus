@@ -21,10 +21,8 @@ public class Planet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @NotBlank
-    private String coordinateX;
-    @NotBlank
-    private String coordinateY;
+    private int coordinateX;
+    private int coordinateY;
     @NotBlank
     @Size(max = 20)
     private String name;
