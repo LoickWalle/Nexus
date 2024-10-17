@@ -10,6 +10,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -32,9 +33,9 @@ public class Fleet {
     @DateTimeFormat
     private LocalDate arrivalTime;
 
-//    @OneToMany(mappedBy = "fleet")
-//    @Builder.Default
-//    private Set<FleetShip> fleetShips = new HashSet<>();
+    @OneToMany(mappedBy = "fleet")
+    @Builder.Default
+    private Set<FleetShip> fleetShips = new HashSet<>();
 
 
 }
