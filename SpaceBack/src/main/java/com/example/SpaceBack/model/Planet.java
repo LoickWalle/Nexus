@@ -21,10 +21,8 @@ public class Planet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    @NotBlank
-    private String coordinateX;
-    @NotBlank
-    private String coordinateY;
+    private int coordinateX;
+    private int coordinateY;
     @NotBlank
     @Size(max = 20)
     private String name;
@@ -44,4 +42,8 @@ public class Planet {
     )
     @Builder.Default
     private Set<Building> buildings = new HashSet<>();
+
+    @OneToMany(mappedBy = "planet")
+    @Builder.Default
+    private Set<PlanetDefense> planetDefenses = new HashSet<>();
 }

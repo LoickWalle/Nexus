@@ -12,18 +12,16 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 
-@Entity
 @Data
+@Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class Defense {
-
+public class Ship {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @JoinColumn(unique = true)
     @NotBlank
     private String name;
 
@@ -34,6 +32,9 @@ public class Defense {
     private int attackPower;
 
     @PositiveOrZero
+    private long speed;
+
+    @PositiveOrZero
     private int costMetal;
 
     @PositiveOrZero
@@ -42,10 +43,8 @@ public class Defense {
     @PositiveOrZero
     private int costDeuterium;
 
-    @PositiveOrZero
-    private int costEnergy;
-
-    @OneToMany(mappedBy = "defense")
+    @OneToMany(mappedBy = "ship")
     @Builder.Default
-    private Set<PlanetDefense> planetDefenses = new HashSet<>();
+    private Set<FleetShip> fleetShips = new HashSet<>();
+
 }
