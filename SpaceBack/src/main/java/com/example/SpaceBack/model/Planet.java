@@ -42,4 +42,8 @@ public class Planet {
     )
     @Builder.Default
     private Set<Building> buildings = new HashSet<>();
+
+    @OneToMany(mappedBy = "planet")
+    @Builder.Default
+    private Set<PlanetDefense> planetDefenses = new HashSet<>();
 }

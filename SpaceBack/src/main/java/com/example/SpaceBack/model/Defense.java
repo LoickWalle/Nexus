@@ -8,6 +8,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -43,7 +45,7 @@ public class Defense {
     @PositiveOrZero
     private int costEnergy;
 
-//    @OneToMany(mappedBy = "todo")
-//    @Builder.Default
-//    private Set<PlanetDefense> planetDefenses = new HashSet<>();
+    @OneToMany(mappedBy = "defense")
+    @Builder.Default
+    private Set<PlanetDefense> planetDefenses = new HashSet<>();
 }
