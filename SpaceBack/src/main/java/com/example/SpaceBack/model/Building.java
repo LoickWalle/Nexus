@@ -10,6 +10,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -17,7 +19,7 @@ import java.util.UUID;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Building {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -37,4 +39,8 @@ public abstract class Building {
     private int costDeuterium;
     @PositiveOrZero
     private int costEnergy;
+
+    @ManyToMany
+    @Builder.Default
+    private Set<Planet> planets = new HashSet<>();
 }

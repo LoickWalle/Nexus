@@ -35,4 +35,13 @@ public class Planet {
     @OneToMany(mappedBy = "planet")
     @Builder.Default
     private Set<ConstructionQueue> constructionQueues = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "planet_building",
+            joinColumns = @JoinColumn(name = "planet_id"),
+            inverseJoinColumns = @JoinColumn(name = "building_id")
+    )
+    @Builder.Default
+    private Set<Building> buildings = new HashSet<>();
 }
