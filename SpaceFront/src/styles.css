@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/*@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&display=swap');
+
+:root {
+  --main-font: 'Electrolize', sans-serif;
+  --title-font: 'Orbitron', sans-serif;
+  --bg-color: #192542;
+  --primary: #2a9d8f;
+  --secondary: #7efaef;
+  --accent: #dee4f0;
+  --accent-dark: #E42F0F;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--main-font);
+}
+
