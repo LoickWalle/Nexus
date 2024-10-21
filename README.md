@@ -6,6 +6,11 @@
 
 ![Alt text](MLD.png)
 
+# Layout du front
+
+![Alt text](Layout_Nexus_V1.png)
+
+
 # Docker Setup for PostgreSQL and pgAdmin
 
 ## Start all containers
