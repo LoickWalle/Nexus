@@ -13,7 +13,7 @@ import java.util.Date;
 public class ExceptionHandlerNexus {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ExceptionDTO> handleConflictException(MethodArgumentNotValidException ex){
+    public ResponseEntity<ExceptionDTO> handleNotValidException(MethodArgumentNotValidException ex){
         ExceptionDTO exceptionDTO = new ExceptionDTO(ex.getMessage(), ex.getStatusCode().value(), LocalDateTime.now());
 
         return new ResponseEntity<>(exceptionDTO, ex.getStatusCode());
