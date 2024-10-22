@@ -1,17 +1,18 @@
 package com.example.SpaceBack.dto;
 
+import com.example.SpaceBack.model.FleetShip;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class FleetDto {
-    private String name;
-    private int destinationX;
-    private int destinationY;
-    private LocalDate arrivalDate;
-}
+
+public record FleetDto (
+        String name,
+        int destinationX,
+        int destinationY,
+        LocalDate arrivalDate,
+        Set<FleetShipDto> fleetShipsDto
+)
+{}
