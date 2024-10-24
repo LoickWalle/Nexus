@@ -10,6 +10,9 @@
 
 ![Alt text](Layout_Nexus_V1.png)
 
+# DTO flow chart
+
+![Alt text](NexusDTO.png)
 
 # Docker Setup for PostgreSQL and pgAdmin
 
