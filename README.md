@@ -8,7 +8,7 @@
 
 # Layout du front
 
-![Alt text](Layout_Nexus_V1.png)
+![Alt text](Layout_Nexus_V1.1.png)
 
 # DTO flow chart
 
