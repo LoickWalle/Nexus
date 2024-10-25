@@ -8,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -23,7 +23,7 @@ public class ConstructionQueue {
     private UUID idToBuild;
     private ConstructionType constructionType;
     @DateTimeFormat
-    private LocalDate constructionEndTime;
+    private LocalDateTime constructionEndTime;
 
     @ManyToOne
     private Planet planet;
