@@ -14,6 +14,7 @@ public record AccountModifiedDto (
     String newPassword,
     String previousPassword,
     String newAvatarUrl,
+    // for identification purpose (with email)
     @NotNull
     LocalDateTime createdAt
 ){}
