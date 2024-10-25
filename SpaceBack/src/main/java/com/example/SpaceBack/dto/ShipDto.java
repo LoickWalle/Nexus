@@ -14,9 +14,11 @@ public record ShipDto (
     @PositiveOrZero
     long speed,
     @PositiveOrZero
-    int costMetal,
+    long costMetal,
     @PositiveOrZero
-    int costCristal,
+    long costCristal,
     @PositiveOrZero
-    int costDeuterium
+    long costDeuterium,
+    @PositiveOrZero
+    int quantity
 ){}
