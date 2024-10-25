@@ -15,5 +15,5 @@ public record AccountDto (
     @NotBlank
     String avatarUrl,
     @NotNull
-    LocalDateTime createAt
+    LocalDateTime createdAt
 ){}
