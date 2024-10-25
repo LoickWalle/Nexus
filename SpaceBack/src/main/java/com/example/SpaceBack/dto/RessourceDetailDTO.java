@@ -18,5 +18,5 @@ public record RessourceDetailDTO (
     @PositiveOrZero
     long energyProduction,
     @PositiveOrZero
-    long costEnergy
+    long energyConsumption
 ){}
