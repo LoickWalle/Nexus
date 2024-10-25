@@ -1,9 +1,14 @@
 package com.example.SpaceBack.dto;
 
+import jakarta.validation.constraints.NotNull;
+
 import java.util.Set;
 
 public record DefenseComponentDto(
-       Set<DefenseDto> defensesDto,
-       Set<ConstructionQueueDto> constructionQueuesDto
+        @NotNull
+        Set<DefenseDto> defensesDto,
+
+        @NotNull
+        Set<ConstructionQueueDto> constructionQueuesDto
 ) {
 }
