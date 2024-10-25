@@ -12,6 +12,9 @@ public record ConstructionQueueDto(
         int buildingLevel,
 
         @DateTimeFormat
-        LocalDateTime constructionEndTime
+        LocalDateTime constructionEndTime,
+
+        @DateTimeFormat
+        LocalDateTime createdAt
 ) {
 }
