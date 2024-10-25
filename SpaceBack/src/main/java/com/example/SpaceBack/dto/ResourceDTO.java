@@ -2,7 +2,7 @@ package com.example.SpaceBack.dto;
 
 import jakarta.validation.constraints.NotNull;
 
-public record RessourceDTO (
+public record ResourceDTO(
     @NotNull
     RessourceCurrentDTO ressourceCurrentDTO,
     @NotNull
