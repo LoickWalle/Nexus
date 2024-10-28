@@ -17,6 +17,6 @@ public record FleetDTO(
         int destinationY,
         @DateTimeFormat
         LocalDateTime arrivalDate,
-        Set<ShipDTO> ShipsDTO
+        Set<ShipDTO> ShipDTOs
 )
 {}
