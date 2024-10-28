@@ -10,6 +10,6 @@ public interface DefenseService {
 
     DefenseComponentDTO getDefenseComponentDTOByPlanetId(UUID planetId);
 
-    DefenseDTO getDefenseDTOByName(String name);
-    Set<DefenseDTO> getAllDefenseDTOs();
+    DefenseDTO getDefenseByName(String name);
+    Set<DefenseDTO> getAllDefenses();
 }
