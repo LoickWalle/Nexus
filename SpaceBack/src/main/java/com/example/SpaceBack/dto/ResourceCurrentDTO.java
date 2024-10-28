@@ -2,7 +2,7 @@ package com.example.SpaceBack.dto;
 
 import jakarta.validation.constraints.PositiveOrZero;
 
-public record RessourceCurrentDTO (
+public record ResourceCurrentDTO(
     @PositiveOrZero
     long currentMetal,
     @PositiveOrZero
