@@ -7,6 +7,7 @@ import java.util.Set;
 
 public record PlanetDTO (
     @NotBlank
+    @Size(max = 20)
     String name,
     long coordinateX,
     long coordinateY,
