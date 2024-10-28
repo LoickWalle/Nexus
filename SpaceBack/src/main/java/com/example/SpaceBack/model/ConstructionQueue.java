@@ -24,6 +24,8 @@ public class ConstructionQueue {
     private ConstructionType constructionType;
     @DateTimeFormat
     private LocalDateTime constructionEndTime;
+    @DateTimeFormat
+    private LocalDateTime createdAt;
 
     @ManyToOne
     private Planet planet;
