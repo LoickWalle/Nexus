@@ -39,6 +39,8 @@ public abstract class Building {
     private int costDeuterium;
     @PositiveOrZero
     private int costEnergy;
+    @NotBlank
+    private String buildingAvatarUrl;
 
     @ManyToMany
     @Builder.Default
