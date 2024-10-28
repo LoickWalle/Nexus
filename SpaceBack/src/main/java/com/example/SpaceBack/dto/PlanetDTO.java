@@ -12,5 +12,5 @@ public record PlanetDTO (
     long coordinateX,
     long coordinateY,
     @NotNull
-    Set<ConstructionQueueDto> queueDTOs
+    Set<ConstructionQueueDTO> queueDTOs
 ){}

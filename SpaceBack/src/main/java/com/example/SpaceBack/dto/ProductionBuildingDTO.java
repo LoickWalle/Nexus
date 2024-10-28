@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.PositiveOrZero;
 
-public record ProductionBuildingDto(
+public record ProductionBuildingDTO(
         @NotBlank
         String name,
         @NotBlank

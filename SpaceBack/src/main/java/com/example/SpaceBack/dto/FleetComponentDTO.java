@@ -3,10 +3,10 @@ package com.example.SpaceBack.dto;
 import jakarta.validation.constraints.NotNull;
 import java.util.Set;
 
-public record FleetComponentDto(
+public record FleetComponentDTO(
         @NotNull
-        Set<FleetDto> FleetsDto,
+        Set<FleetDTO> FleetsDTO,
         @NotNull
-        Set<ConstructionQueueDto> ConstructionQueuesDto
+        Set<ConstructionQueueDTO> ConstructionQueuesDTO
 ) {
 }

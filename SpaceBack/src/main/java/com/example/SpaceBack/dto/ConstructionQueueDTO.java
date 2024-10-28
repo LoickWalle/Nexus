@@ -5,7 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
-public record ConstructionQueueDto(
+public record ConstructionQueueDTO(
         String buildingUrl,
 
         @Positive
