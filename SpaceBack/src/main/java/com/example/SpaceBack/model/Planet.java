@@ -2,12 +2,15 @@ package com.example.SpaceBack.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -26,6 +29,15 @@ public class Planet {
     @NotBlank
     @Size(max = 20)
     private String name;
+    @PositiveOrZero
+    private long currentMetalStock;
+    @PositiveOrZero
+    private long currentCristalStock;
+    @PositiveOrZero
+    private long currentDeuteriumStock;
+    private long currentEnergy;
+    @DateTimeFormat
+    private LocalDateTime refreshedAt;
 
     @ManyToOne
     private Account owner;
