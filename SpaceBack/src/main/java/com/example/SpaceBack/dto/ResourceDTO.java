@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record ResourceDTO(
     @NotNull
-    RessourceCurrentDTO ressourceCurrentDTO,
+    ResourceCurrentDTO resourceCurrentDTO,
     @NotNull
-    RessourceDetailDTO ressourceDetailDTO
+    ResourceDetailDTO resourceDetailDTO
 ){}
