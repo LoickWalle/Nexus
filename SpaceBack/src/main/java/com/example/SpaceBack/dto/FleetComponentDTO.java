@@ -5,8 +5,8 @@ import java.util.Set;
 
 public record FleetComponentDTO(
         @NotNull
-        Set<FleetDTO> FleetsDTO,
+        Set<FleetDTO> FleetDTOs,
         @NotNull
-        Set<ConstructionQueueDTO> ConstructionQueuesDTO
+        Set<ConstructionQueueDTO> ConstructionQueueDTOs
 ) {
 }
