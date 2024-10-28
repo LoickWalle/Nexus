@@ -6,10 +6,10 @@ import java.util.Set;
 
 public record BuildingComponentDTO(
         @NotNull
-        Set<ProductionBuildingDto> productionBuildingDTOs,
+        Set<ProductionBuildingDTO> productionBuildingDTOs,
         @NotNull
-        Set<StorageBuildingDto> storageBuildingDTOs,
+        Set<StorageBuildingDTO> storageBuildingDTOs,
         @NotNull
-        Set<ConstructionQueueDto> constructionQueueDTOs
+        Set<ConstructionQueueDTO> constructionQueueDTOs
 ) {
 }

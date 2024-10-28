@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.UUID;
 
 
-public record FleetDto (
+public record FleetDTO(
         @NotBlank
         UUID id,
         @NotBlank
@@ -17,6 +17,6 @@ public record FleetDto (
         int destinationY,
         @DateTimeFormat
         LocalDateTime arrivalDate,
-        Set<ShipDto> ShipsDto
+        Set<ShipDTO> ShipDTOs
 )
 {}
