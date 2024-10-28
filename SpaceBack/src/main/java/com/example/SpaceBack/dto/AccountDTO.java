@@ -6,15 +6,14 @@ import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
-public record AccountModifiedDto (
-    String newUsername,
-    @Email
+public record AccountDTO(
     @NotBlank
+    String username,
+    @NotBlank
+    @Email
     String email,
-    String newPassword,
-    String previousPassword,
-    String newAvatarUrl,
-    // for identification purpose (with email)
+    @NotBlank
+    String avatarUrl,
     @NotNull
     LocalDateTime createdAt
 ){}
