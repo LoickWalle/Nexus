@@ -11,8 +11,8 @@ public interface FleetService {
     FleetDTO createFleet(FleetDTO fleetToCreate);
     FleetDTO updateFleet(FleetDTO fleetToUpdate);
     FleetDTO getFleetById(UUID fleetId);
-    FleetDTO deleteFleet(FleetDTO fleetToDelete);
     Set<FleetDTO> getAllFleetsByPlanetId(UUID planetId);
+    FleetDTO deleteFleet(FleetDTO fleetToDelete);
 
     FleetComponentDTO getFleetComponentByAccount(AccountShortDTO accountToFind);
 }
