@@ -44,7 +44,7 @@ public class Planet {
 
     @OneToMany(mappedBy = "planet")
     @Builder.Default
-    private Set<ConstructionQueue> constructionQueues = new HashSet<>();
+    private Set<ConstructionQueueItem> constructionQueueItems = new HashSet<>();
 
     @ManyToMany
     @JoinTable(
