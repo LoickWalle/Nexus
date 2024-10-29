@@ -1,6 +1,7 @@
 package com.example.SpaceBack.service;
 
 import com.example.SpaceBack.dto.AccountDTO;
+import com.example.SpaceBack.dto.AccountShortDTO;
 import com.example.SpaceBack.dto.FleetComponentDTO;
 import com.example.SpaceBack.dto.FleetDTO;
 
@@ -12,5 +13,5 @@ public interface FleetService {
     FleetDTO getFleetById(UUID fleetId);
     FleetDTO deleteFleet(FleetDTO fleetToDelete);
 
-    FleetComponentDTO getFleetComponentByAccount(AccountDTO accountToFind);
+    FleetComponentDTO getFleetComponentByAccount(AccountShortDTO accountToFind);
 }
