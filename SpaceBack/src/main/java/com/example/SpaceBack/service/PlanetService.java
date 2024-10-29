@@ -9,6 +9,7 @@ import java.util.UUID;
 
 public interface PlanetService {
     PlanetDTO getPlanetById(UUID planetId);
+    PlanetDTO renamePlanet(PlanetDTO planetToUpdate);
     ResourceCurrentDTO getResourceCurrent(UUID planetId);
     ResourceDetailDTO getResourceDetail(UUID planetId);
     ResourceDTO getResource(UUID planetId);
