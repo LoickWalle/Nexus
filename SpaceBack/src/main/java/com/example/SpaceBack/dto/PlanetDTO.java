@@ -2,6 +2,7 @@ package com.example.SpaceBack.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 
 import java.util.Set;
 
@@ -12,5 +13,5 @@ public record PlanetDTO (
     long coordinateX,
     long coordinateY,
     @NotNull
-    Set<ConstructionQueueDTO> queueDTOs
+    Set<ConstructionQueueItemDTO> queueDTOs
 ){}

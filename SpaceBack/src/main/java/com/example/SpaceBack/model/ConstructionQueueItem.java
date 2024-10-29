@@ -16,7 +16,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ConstructionQueue {
+public class ConstructionQueueItem {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
