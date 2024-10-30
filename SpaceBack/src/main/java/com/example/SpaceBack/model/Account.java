@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -35,7 +35,7 @@ public class Account {
     @NotBlank
     private String password;
     @DateTimeFormat
-    private LocalDate createdAt;
+    private LocalDateTime createdAt;
     private String avatarUrl;
 
     @OneToMany(mappedBy = "owner")
