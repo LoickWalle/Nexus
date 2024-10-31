@@ -45,6 +45,9 @@ public class Defense {
     @PositiveOrZero
     private int costEnergy;
 
+    @NotBlank
+    private String defenseAvatarURL;
+
     @OneToMany(mappedBy = "defense")
     @Builder.Default
     private Set<PlanetDefense> planetDefenses = new HashSet<>();
