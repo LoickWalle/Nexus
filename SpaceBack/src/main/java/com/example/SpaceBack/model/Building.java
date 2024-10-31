@@ -32,13 +32,13 @@ public abstract class Building {
     @Positive
     private int level;
     @PositiveOrZero
-    private int costMetal;
+    private long costMetal;
     @PositiveOrZero
-    private int costCristal;
+    private long costCristal;
     @PositiveOrZero
-    private int costDeuterium;
+    private long costDeuterium;
     @PositiveOrZero
-    private int costEnergy;
+    private long costEnergy;
     @NotBlank
     private String buildingAvatarUrl;
 

@@ -35,13 +35,13 @@ public class Ship {
     private long speed;
 
     @PositiveOrZero
-    private int costMetal;
+    private long costMetal;
 
     @PositiveOrZero
-    private int costCristal;
+    private long costCristal;
 
     @PositiveOrZero
-    private int costDeuterium;
+    private long costDeuterium;
 
     @OneToMany(mappedBy = "ship")
     @Builder.Default
