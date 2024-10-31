@@ -36,7 +36,7 @@ public class Account {
     private String password;
     @DateTimeFormat
     private LocalDateTime createdAt;
-    private String avatarUrl;
+    private String avatarURL;
 
     @OneToMany(mappedBy = "owner")
     @Builder.Default
