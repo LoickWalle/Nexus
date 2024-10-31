@@ -27,7 +27,7 @@ class AccountMapperTest {
                 .email("toto@gmail.com")
                 .password("password")
                 .createdAt(createdAt)
-                .avatarUrl("url")
+                .avatarURL("url")
                 .build();
     }
 
