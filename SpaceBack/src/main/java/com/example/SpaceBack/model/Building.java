@@ -40,7 +40,7 @@ public abstract class Building {
     @PositiveOrZero
     private int costEnergy;
     @NotBlank
-    private String buildingAvatarUrl;
+    private String buildingAvatarURL;
 
     @ManyToMany
     @Builder.Default
