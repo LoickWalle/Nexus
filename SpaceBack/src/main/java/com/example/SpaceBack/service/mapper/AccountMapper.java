@@ -1,5 +1,6 @@
 package com.example.SpaceBack.service.mapper;
 
+import com.example.SpaceBack.dto.AccountCreatedDTO;
 import com.example.SpaceBack.dto.AccountDTO;
 import com.example.SpaceBack.dto.AccountModifiedDTO;
 import com.example.SpaceBack.dto.AccountShortDTO;
@@ -18,4 +19,7 @@ public interface AccountMapper {
 
     // AccountDTO
     AccountDTO accountToAccountDTO(Account account);
+
+    // AccountCreatedDTO
+    Account accountCreatedDTOToAccount(AccountCreatedDTO accountCreatedDTO);
 }

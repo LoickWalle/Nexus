@@ -1,5 +1,6 @@
 package com.example.SpaceBack.service.mapper;
 
+import com.example.SpaceBack.dto.AccountCreatedDTO;
 import com.example.SpaceBack.dto.AccountDTO;
 import com.example.SpaceBack.dto.AccountShortDTO;
 import com.example.SpaceBack.model.Account;
@@ -50,6 +51,41 @@ class AccountMapperTest {
 
         // when
         AccountDTO result = AccountMapper.INSTANCE_ACCOUNT.accountToAccountDTO(account);
+
+        // then
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void accountCreatedDTO_With_URL_Should_Map_To_Account() {
+        // given
+        AccountCreatedDTO accountCreatedDTO = new AccountCreatedDTO("toto","toto@gmail.com","password", "url");
+        Account expected = Account.builder()
+                .username("toto")
+                .email("toto@gmail.com")
+                .password("password")
+                .avatarURL("url")
+                .build();
+
+        // when
+        Account result = AccountMapper.INSTANCE_ACCOUNT.accountCreatedDTOToAccount(accountCreatedDTO);
+
+        // then
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void accountCreatedDTO_Without_URL_Should_Map_To_Account() {
+        // given
+        AccountCreatedDTO accountCreatedDTO = new AccountCreatedDTO("toto","toto@gmail.com","password",null);
+        Account expected = Account.builder()
+                .username("toto")
+                .email("toto@gmail.com")
+                .password("password")
+                .build();
+
+        // when
+        Account result = AccountMapper.INSTANCE_ACCOUNT.accountCreatedDTOToAccount(accountCreatedDTO);
 
         // then
         assertThat(result).isEqualTo(expected);
