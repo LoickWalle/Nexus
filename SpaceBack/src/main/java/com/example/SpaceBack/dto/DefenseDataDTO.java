@@ -3,7 +3,7 @@ package com.example.SpaceBack.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 
-public record DefenseDTO(
+public record DefenseDataDTO(
         @NotBlank
         String name,
 
@@ -26,9 +26,6 @@ public record DefenseDTO(
         long costEnergy,
 
         @NotBlank
-        String defenseAvatarURL,
-
-        @PositiveOrZero
-        int quantity
+        String defenseAvatarURL
 ) {
 }
