@@ -4,7 +4,7 @@ package com.example.SpaceBack.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
 
-public record ShipDTO(
+public record ShipPlayerDTO(
         @NotBlank
         String name,
         @PositiveOrZero
