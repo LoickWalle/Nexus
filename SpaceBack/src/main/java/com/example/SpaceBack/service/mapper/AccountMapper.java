@@ -14,7 +14,6 @@ public interface AccountMapper {
     AccountMapper INSTANCE_ACCOUNT = Mappers.getMapper(AccountMapper.class);
 
     // AccountShortDTO
-    @Mapping(source = "avatarUrl", target = "avatarURL")
     AccountShortDTO accountToAccountShortDTO(Account account);
 
     // AccountDTO

@@ -13,7 +13,7 @@ public record AccountDTO(
     @Email
     String email,
     @NotBlank
-    String avatarUrl,
+    String avatarURL,
     @NotNull
     LocalDateTime createdAt
 ){}
