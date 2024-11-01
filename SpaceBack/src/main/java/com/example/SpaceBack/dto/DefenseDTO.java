@@ -25,6 +25,9 @@ public record DefenseDTO(
         @PositiveOrZero
         long costEnergy,
 
+        @NotBlank
+        String defenseAvatarURL,
+
         @PositiveOrZero
         int quantity
 ) {

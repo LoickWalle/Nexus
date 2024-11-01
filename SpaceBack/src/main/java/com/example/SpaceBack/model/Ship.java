@@ -43,6 +43,9 @@ public class Ship {
     @PositiveOrZero
     private long costDeuterium;
 
+    @NotBlank
+    private String shipAvatarURL;
+
     @OneToMany(mappedBy = "ship")
     @Builder.Default
     private Set<FleetShip> fleetShips = new HashSet<>();
