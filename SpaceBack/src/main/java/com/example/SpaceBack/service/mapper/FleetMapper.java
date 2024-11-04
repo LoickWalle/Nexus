@@ -8,7 +8,7 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface FleetMapper {
-    AccountMapper INSTANCE_FLEET = Mappers.getMapper(AccountMapper.class);
+    FleetMapper INSTANCE_FLEET = Mappers.getMapper(FleetMapper.class);
 
     //FleetDTO
     @Mapping(source = "ShipPlayerDTO.fleetShipToShipPlayerDTO", target = "ShipDTOs")
