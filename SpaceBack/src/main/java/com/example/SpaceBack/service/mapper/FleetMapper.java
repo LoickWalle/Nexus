@@ -6,11 +6,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(uses = {ShipMapper.class})
 public interface FleetMapper {
     FleetMapper INSTANCE_FLEET = Mappers.getMapper(FleetMapper.class);
 
     //FleetDTO
-    @Mapping(source = "ShipPlayerDTO.fleetShipToShipPlayerDTO", target = "ShipDTOs")
+    @Mapping(source = "fleetShips", target = "shipDTOs")
     FleetDTO fleetToFleetDTO(Fleet fleet);
 }
