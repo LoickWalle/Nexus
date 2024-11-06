@@ -1,5 +1,7 @@
 package com.example.SpaceBack.service.mapper;
 
+import com.example.SpaceBack.dto.StorageBuildingDTO;
+import com.example.SpaceBack.model.StorageBuilding;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -7,4 +9,7 @@ import org.mapstruct.factory.Mappers;
 public interface StorageBuildingMapper {
 
     StorageBuildingMapper INSTANCE_STORAGE_BUILDING = Mappers.getMapper(StorageBuildingMapper.class);
+
+    // StorageBuildingDTO
+    StorageBuildingDTO storageBuildingToStorageBuildingDTO(StorageBuilding storageBuilding);
 }
