@@ -1,0 +1,20 @@
+<section>
+  <form
+    [formGroup]="formLogin"
+    (ngSubmit)="log()"
+  >
+    <p>
+      <label for="email">Adresse mail : </label>
+      <input id="email" type="email" formControlName="email">
+    </p>
+    <p>
+      <label for="password">Mot de passe : </label>
+      <input id="password" type="password" formControlName="password">
+    </p>
+    <p>
+      <input type="checkbox" id="isRemembered" formControlName="isRemembered">
+      <label for="isRemembered">Rester connecté ?</label>
+    </p>
+    <button>Se connecter</button>
+  </form>
+</section>
