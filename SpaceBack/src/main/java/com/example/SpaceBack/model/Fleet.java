@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -31,7 +32,7 @@ public class Fleet {
     private int destinationY;
 
     @DateTimeFormat
-    private LocalDate arrivalTime;
+    private LocalDateTime arrivalTime;
 
     @OneToMany(mappedBy = "fleet")
     @Builder.Default
