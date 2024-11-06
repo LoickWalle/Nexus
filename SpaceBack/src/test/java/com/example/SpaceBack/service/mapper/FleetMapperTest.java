@@ -21,15 +21,13 @@ class FleetMapperTest {
     @Test
     public void fleet_Should_Map_To_FleetDTO() {
 
+        //given
         LocalDateTime arrival =  LocalDateTime.now();
         UUID identifiant1 = UUID.randomUUID();
         UUID identifiant2 = UUID.randomUUID();
         UUID identifiant3 = UUID.randomUUID();
         UUID identifiant4 = UUID.randomUUID();
         UUID identifiant5 = UUID.randomUUID();
-
-
-
 
         Ship ship1 = Ship.builder()
                 .id(identifiant1)
@@ -42,7 +40,6 @@ class FleetMapperTest {
                 .costDeuterium(35)
                 .shipAvatarURL("shipurl1")
                 .build();
-
 
         ShipPlayerDTO ship1DTO = new ShipPlayerDTO(
                 "toto",
@@ -86,7 +83,6 @@ class FleetMapperTest {
                 .destinationX(15)
                 .destinationY(20)
                 .arrivalTime(arrival)
-//                .fleetShips()
                 .build();
 
         FleetShip fleetShip1 = FleetShip.builder()
@@ -109,14 +105,10 @@ class FleetMapperTest {
 
         fleet.setFleetShips(fleetShips);
 
-
         Set<ShipPlayerDTO> shipDTOs = new HashSet<>();
         shipDTOs.add(ship1DTO);
         shipDTOs.add(ship2DTO);
 
-
-
-        //given
         FleetDTO expected = new FleetDTO(
                 identifiant3,
                 "nomDelaFlotte",
