@@ -18,6 +18,13 @@
       <input id="email" type="email" formControlName="email">
     </p>
     <p>
+      @if (password.invalid && password.touched) {
+        <small class="alert">
+          @if (password.hasError('required')) {
+            <p>Le password est requis.</p>
+          }
+        </small>
+      }
       <label for="password">Mot de passe : </label>
       <input id="password" type="password" formControlName="password">
     </p>
