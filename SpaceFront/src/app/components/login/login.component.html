@@ -4,6 +4,16 @@
     (ngSubmit)="log()"
   >
     <p>
+      @if (email.invalid && email.touched) {
+        <small class="alert">
+          @if (email.hasError('required')) {
+            <p>L'email est requis.</p>
+          }
+          @if (email.hasError('email')) {
+            <p>L'email doit comporter un arobase.</p>
+          }
+        </small>
+      }
       <label for="email">Adresse mail : </label>
       <input id="email" type="email" formControlName="email">
     </p>
@@ -15,6 +25,6 @@
       <input type="checkbox" id="isRemembered" formControlName="isRemembered">
       <label for="isRemembered">Rester connecté ?</label>
     </p>
-    <button>Se connecter</button>
+    <button [disabled]="!formLogin.valid">Se connecter</button>
   </form>
 </section>
