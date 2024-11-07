@@ -21,7 +21,9 @@ export class LoginComponent {
   });
 
   log() {
-    console.log(this.formLogin.value);
+    if (this.formLogin.valid) {
+      console.log(this.formLogin.value as Login);
+    }
   }
 
   get email() {
