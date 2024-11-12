@@ -1,0 +1,31 @@
+section {
+  width: clamp(350px, 50%, 500px);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin: auto;
+}
+
+form > div {
+  padding: 10px 0;
+}
+
+.error-message {
+  font-size: 0.8em;
+  color: var(--accent-dark);
+}
+
+.is-remembered {
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  margin-right: 5px;
+}

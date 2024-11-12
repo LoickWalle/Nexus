@@ -1,0 +1,43 @@
+<section>
+  <form
+    [formGroup]="formLogin"
+    (ngSubmit)="log()"
+  >
+
+    <div class="mail">
+      <p><label for="email">Adresse mail</label></p>
+      <p><input id="email" type="email" formControlName="email"></p>
+      @if (email.invalid && email.touched) {
+        <div class="error-message">
+          @if (email.hasError('required')) {
+            <p>L'email est requis</p>
+          }
+          @if (email.hasError('email')) {
+            <p>L'email doit comporter un arobase</p>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="password">
+      <p><label for="password">Mot de passe</label></p>
+      <p><input id="password" type="password" formControlName="password"></p>
+      @if (password.invalid && password.touched) {
+        <div class="error-message">
+          @if (password.hasError('required')) {
+            <p>Le password est requis</p>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="is-remembered">
+      <input type="checkbox" id="is-remembered" formControlName="isRemembered">
+      <label for="is-remembered">Rester connecté ?</label>
+    </div>
+
+    <!--    <button [disabled]="!formLogin.valid">Se connecter</button>-->
+    <app-button [label]="BUTTON_LABEL"></app-button>
+
+  </form>
+</section>

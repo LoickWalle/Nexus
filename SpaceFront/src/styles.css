@@ -1,9 +1,15 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Orbitron:wght@400..900&display=swap');
 
+/*reset*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  --main-font: 'Electrolize', sans-serif;
-  --title-font: 'Orbitron', sans-serif;
+  --main-font: 'Electrolize';
+  --title-font: 'Orbitron';
   --bg-color: #192542;
   --primary: #2a9d8f;
   --secondary: #7efaef;
@@ -13,6 +19,6 @@
 
 body {
   background-color: var(--bg-color);
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
+  color: var(--accent);
 }
-

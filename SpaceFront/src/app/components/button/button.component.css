@@ -1,0 +1,21 @@
+button {
+  background-color: var(--primary);
+  font-family: var(--main-font), sans-serif;
+  font-weight: bold;
+  color: var(--bg-color);
+  padding: 4px 12px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 3px #999;
+  transition: color 500ms ease-out, transform 150ms ease-out;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  color: var(--accent);
+}
+
+button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(2px);
+}
