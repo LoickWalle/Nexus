@@ -3,35 +3,41 @@
     [formGroup]="formLogin"
     (ngSubmit)="log()"
   >
-    <p>
+
+    <div class="mail">
+      <p><label for="email">Adresse mail</label></p>
+      <p><input id="email" type="email" formControlName="email"></p>
       @if (email.invalid && email.touched) {
-        <small class="alert">
+        <div class="error-message">
           @if (email.hasError('required')) {
-            <p>L'email est requis.</p>
+            <p>L'email est requis</p>
           }
           @if (email.hasError('email')) {
-            <p>L'email doit comporter un arobase.</p>
+            <p>L'email doit comporter un arobase</p>
           }
-        </small>
+        </div>
       }
-      <label for="email">Adresse mail : </label>
-      <input id="email" type="email" formControlName="email">
-    </p>
-    <p>
+    </div>
+
+    <div class="password">
+      <p><label for="password">Mot de passe</label></p>
+      <p><input id="password" type="password" formControlName="password"></p>
       @if (password.invalid && password.touched) {
-        <small class="alert">
+        <div class="error-message">
           @if (password.hasError('required')) {
-            <p>Le password est requis.</p>
+            <p>Le password est requis</p>
           }
-        </small>
+        </div>
       }
-      <label for="password">Mot de passe : </label>
-      <input id="password" type="password" formControlName="password">
-    </p>
-    <p>
-      <input type="checkbox" id="isRemembered" formControlName="isRemembered">
-      <label for="isRemembered">Rester connecté ?</label>
-    </p>
-    <button [disabled]="!formLogin.valid">Se connecter</button>
+    </div>
+
+    <div class="is-remembered">
+      <input type="checkbox" id="is-remembered" formControlName="isRemembered">
+      <label for="is-remembered">Rester connecté ?</label>
+    </div>
+
+    <!--    <button [disabled]="!formLogin.valid">Se connecter</button>-->
+    <app-button [label]="BUTTON_LABEL"></app-button>
+
   </form>
 </section>
