@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Login} from '../../models/login.interface';
 import {ButtonComponent} from '../button/button.component';
+import {AccountService} from "../../services/account.service";
 
 @Component({
   selector: 'app-login',
@@ -18,15 +19,19 @@ export class LoginComponent {
 
   BUTTON_LABEL: string = "Se connecter";
 
+  constructor(private accountService: AccountService) {
+  }
+
   formLogin = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [Validators.required]),
     isRemembered: new FormControl(false),
   });
 
-  log() {
+  login() {
     if (this.formLogin.valid) {
       console.log(this.formLogin.value as Login);
+      this.accountService.login(this.formLogin.value as Login).subscribe();
       this.formLogin.reset();
     }
   }

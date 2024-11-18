@@ -1,12 +1,12 @@
 <section>
   <form
     [formGroup]="formLogin"
-    (ngSubmit)="log()"
+    (ngSubmit)="login()"
   >
 
     <div class="mail">
       <p><label for="email">Adresse mail</label></p>
-      <p><input id="email" type="email" formControlName="email"></p>
+      <p><input id="email" type="email" formControlName="email" autocomplete="on"></p>
       @if (email.invalid && email.touched) {
         <div class="error-message">
           @if (email.hasError('required')) {
@@ -36,7 +36,6 @@
       <label for="is-remembered">Rester connecté ?</label>
     </div>
 
-    <!--    <button [disabled]="!formLogin.valid">Se connecter</button>-->
     <app-button [label]="BUTTON_LABEL"></app-button>
 
   </form>
