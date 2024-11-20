@@ -7,6 +7,6 @@ public record FleetComponentDTO(
         @NotNull
         Set<FleetDTO> FleetDTOs,
         @NotNull
-        Set<ConstructionQueueItemDTO> constructionQueueItemDTOs
+        Set<QueueItemDTO> queueItemDTOS
 ) {
 }

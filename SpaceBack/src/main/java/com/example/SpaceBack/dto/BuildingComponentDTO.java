@@ -10,6 +10,6 @@ public record BuildingComponentDTO(
         @NotNull
         Set<StorageBuildingDTO> storageBuildingDTOs,
         @NotNull
-        Set<ConstructionQueueItemDTO> constructionQueueItemDTOs
+        Set<QueueItemDTO> queueItemDTOS
 ) {
 }

@@ -4,6 +4,6 @@ import java.util.Set;
 
 public record DefenseComponentDTO(
        Set<DefensePlayerDTO> defensePlayerDTOs,
-       Set<ConstructionQueueItemDTO> constructionQueueItemDTOs
+       Set<QueueItemDTO> queueItemDTOS
 ) {
 }
