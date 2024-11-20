@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
 
 public record QueueItemDTO(
 
+        @NotBlank
+        String name,
+
         @NotNull
         String buildingUrl,
 
