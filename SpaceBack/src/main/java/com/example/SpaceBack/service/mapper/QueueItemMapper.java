@@ -12,7 +12,7 @@ public interface QueueItemMapper {
     QueueItemMapper INSTANCE_QUEUE_ITEM = Mappers.getMapper(QueueItemMapper.class);
 
     // QueueItemDTO
-    @Mapping(target = "constructionURL", source = "queueItem.constructionURL")
+    @Mapping(target = "constructionEndTime", source = "queueItem.constructionEndTime")
     @Mapping(target = "createdAt", source = "queueItem.createdAt")
-    QueueItemDTO queueItemWithBuildingToQueueItemDTO(QueueItem queueItem, String name, String constructionUrl, int buildingLevel);
+    QueueItemDTO queueItemWithBuildingToQueueItemDTO(QueueItem queueItem, String name, String constructionURL, int buildingLevel);
 }
