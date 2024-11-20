@@ -13,7 +13,7 @@ public record QueueItemDTO(
         String name,
 
         @NotNull
-        String buildingUrl,
+        String constructionURL,
 
         @DateTimeFormat
         LocalDateTime constructionEndTime,
