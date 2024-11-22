@@ -14,5 +14,10 @@ public interface QueueItemMapper {
     // QueueItemDTO
     @Mapping(target = "constructionEndTime", source = "queueItem.constructionEndTime")
     @Mapping(target = "createdAt", source = "queueItem.createdAt")
-    QueueItemDTO queueItemWithBuildingToQueueItemDTO(QueueItem queueItem, String name, String constructionURL, int buildingLevel);
+    QueueItemDTO queueItemToQueueItemDTO(QueueItem queueItem, String name, String constructionURL, int buildingLevel);
+
+    @Mapping(target = "constructionEndTime", source = "queueItem.constructionEndTime")
+    @Mapping(target = "createdAt", source = "queueItem.createdAt")
+    @Mapping(target = "buildingLevel", constant = "0")
+    QueueItemDTO queueItemToQueueItemDTO(QueueItem queueItem, String name, String constructionURL);
 }
