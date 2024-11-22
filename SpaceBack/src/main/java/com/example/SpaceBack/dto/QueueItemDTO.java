@@ -3,6 +3,7 @@ package com.example.SpaceBack.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.PositiveOrZero;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
@@ -13,7 +14,7 @@ public record QueueItemDTO(
         String name,
 
         @NotNull
-        String buildingUrl,
+        String constructionURL,
 
         @DateTimeFormat
         LocalDateTime constructionEndTime,
@@ -21,7 +22,7 @@ public record QueueItemDTO(
         @DateTimeFormat
         LocalDateTime createdAt,
 
-        @Positive
+        @PositiveOrZero
         int buildingLevel
 ) {
 }
