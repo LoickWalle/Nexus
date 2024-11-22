@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class QueueItemMapperTest {
@@ -37,7 +36,7 @@ class QueueItemMapperTest {
     }
 
     @Test
-    public void queueItem_With_Building_To_QueueItemDTO() {
+    public void queueItem_With_BuildingLevel_To_QueueItemDTO() {
         // given
         queueItem.setConstructionType(ConstructionType.BUILDING);
         int buildingLevel = 1;
@@ -47,10 +46,28 @@ class QueueItemMapperTest {
                 constructionEndTime,
                 createdAt,
                 buildingLevel
-                );
+        );
 
         // when
-        QueueItemDTO result = QueueItemMapper.INSTANCE_QUEUE_ITEM.queueItemWithBuildingToQueueItemDTO(queueItem, name, constructionURL, buildingLevel);
+        QueueItemDTO result = QueueItemMapper.INSTANCE_QUEUE_ITEM.queueItemToQueueItemDTO(queueItem, name, constructionURL, buildingLevel);
+
+        // then
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void queueItem_Without_BuildingLevel_To_QueueItemDTO() {
+        // given
+        QueueItemDTO expected = new QueueItemDTO(
+                name,
+                constructionURL,
+                constructionEndTime,
+                createdAt,
+                0
+        );
+
+        // when
+        QueueItemDTO result = QueueItemMapper.INSTANCE_QUEUE_ITEM.queueItemToQueueItemDTO(queueItem, name, constructionURL);
 
         // then
         assertThat(result).isEqualTo(expected);
