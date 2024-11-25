@@ -15,6 +15,5 @@ public interface PlanetMapper {
     PlanetMapper INSTANCE_PLANET = Mappers.getMapper(PlanetMapper.class);
 
     // PlanetDTO
-    @Mapping(target = "queueItemDTOs", source = "queueItemDTOs")
     PlanetDTO planetToPlanetDTO(Planet planet, Set<QueueItemDTO> queueItemDTOs);
 }
