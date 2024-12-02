@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
@@ -24,18 +25,30 @@ public class Planet {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+
     private int coordinateX;
+
     private int coordinateY;
+
     @NotBlank
     @Size(max = 20)
     private String name;
+
+    @ColumnDefault("100")
     @PositiveOrZero
     private long currentMetalStock;
+
+    @ColumnDefault("100")
     @PositiveOrZero
     private long currentCristalStock;
+
+    @ColumnDefault("100")
     @PositiveOrZero
     private long currentDeuteriumStock;
+
+    @ColumnDefault("50")
     private long currentEnergy;
+
     @DateTimeFormat
     private LocalDateTime refreshedAt;
 
