@@ -23,7 +23,7 @@ public record DefenseDataDTO(
         long costDeuterium,
 
         @PositiveOrZero
-        long costEnergy,
+        long energyConsumption,
 
         @NotBlank
         String defenseAvatarURL

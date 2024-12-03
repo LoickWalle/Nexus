@@ -23,7 +23,7 @@ public interface DefenseMapper {
     @Mapping(target = "costMetal", source = "planetDefense.defense.costMetal")
     @Mapping(target = "costCristal", source = "planetDefense.defense.costCristal")
     @Mapping(target = "costDeuterium", source = "planetDefense.defense.costDeuterium")
-    @Mapping(target = "costEnergy", source = "planetDefense.defense.costEnergy")
+    @Mapping(target = "energyConsumption", source = "planetDefense.defense.energyConsumption")
     @Mapping(target = "defenseAvatarURL", source = "planetDefense.defense.defenseAvatarURL")
     DefensePlayerDTO planetDefenseToDefensePlayerDTO(PlanetDefense planetDefense);
 }

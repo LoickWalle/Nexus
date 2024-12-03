@@ -43,7 +43,7 @@ public class Defense {
     private long costDeuterium;
 
     @PositiveOrZero
-    private long costEnergy;
+    private long energyConsumption;
 
     @NotBlank
     private String defenseAvatarURL;
