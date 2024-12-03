@@ -25,7 +25,7 @@ class DefenseMapperTest {
                 .costMetal(1000)
                 .costCristal(2000)
                 .costDeuterium(3000)
-                .costEnergy(100)
+                .energyConsumption(100)
                 .defenseAvatarURL("url")
                 .build();
         planetDefense = PlanetDefense.builder()
