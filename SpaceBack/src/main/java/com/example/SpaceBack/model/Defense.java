@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -45,6 +46,7 @@ public class Defense {
     @PositiveOrZero
     private long energyConsumption;
 
+    @ColumnDefault("defense_Avatar_URL_Placeholder")
     @NotBlank
     private String defenseAvatarURL;
 
