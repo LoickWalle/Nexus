@@ -46,7 +46,7 @@ public class Defense {
     @PositiveOrZero
     private long energyConsumption;
 
-    @ColumnDefault("defense_Avatar_URL_Placeholder")
+    @ColumnDefault("'defense_Avatar_URL_Placeholder'")
     @NotBlank
     private String defenseAvatarURL;
 
