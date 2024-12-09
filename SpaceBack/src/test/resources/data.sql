@@ -1,51 +1,60 @@
 -- planet table
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 10, 20, 'Planet Alpha');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 15, 25, 'Planet Beta');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 20, 30, 'Planet Gamma');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 25, 35, 'Planet Delta');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 30, 40, 'Planet Epsilon');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 35, 45, 'Planet Zeta');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 40, 50, 'Planet Eta');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 45, 55, 'Planet Theta');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 50, 60, 'Planet Iota');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 55, 65, 'Planet Kappa');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 60, 70, 'Planet Lambda');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 65, 75, 'Planet Mu');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 70, 80, 'Planet Nu');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 75, 85, 'Planet Xi');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 80, 90, 'Planet Omicron');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 85, 95, 'Planet Pi');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 90, 100, 'Planet Rho');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 95, 105, 'Planet Sigma');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 100, 110, 'Planet Tau');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 105, 115, 'Planet Upsilon');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 110, 120, 'Planet Phi');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 115, 125, 'Planet Chi');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 120, 130, 'Planet Psi');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 125, 135, 'Planet Omega');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 130, 140, 'Planet Solaris');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 135, 145, 'Planet Nova');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 140, 150, 'Planet Eclipse');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 145, 155, 'Planet Stardust');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 150, 160, 'Planet Aurora');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 155, 165, 'Planet Nebula');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 160, 170, 'Planet Horizon');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 165, 175, 'Planet Zenith');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 170, 180, 'Planet Comet');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 175, 185, 'Planet Eclipse');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 180, 190, 'Planet Quasar');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 185, 195, 'Planet Supernova');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 190, 200, 'Planet Vortex');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 195, 205, 'Planet Pulsar');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 200, 210, 'Planet Meteor');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 205, 215, 'Planet Cosmos');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 210, 220, 'Planet Galaxy');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 215, 225, 'Planet Orbit');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 220, 230, 'Planet Saturn');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 225, 235, 'Planet Jupiter');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 230, 240, 'Planet Venus');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 235, 245, 'Planet Mars');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 240, 250, 'Planet Neptune');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 245, 255, 'Planet Pluto');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 250, 260, 'Planet Mercury');
-insert into planet (id, coordinateX, coordinateY, name) values (RANDOM_UUID(), 255, 265, 'Planet Earth');
+insert into planet (id, coordinateX, coordinateY, name)
+values (RANDOM_UUID(), 10, 20, 'Planet Alpha'),
+       (RANDOM_UUID(), 15, 25, 'Planet Beta'),
+       (RANDOM_UUID(), 20, 30, 'Planet Gamma'),
+       (RANDOM_UUID(), 25, 35, 'Planet Delta'),
+       (RANDOM_UUID(), 30, 40, 'Planet Epsilon'),
+       (RANDOM_UUID(), 35, 45, 'Planet Zeta'),
+       (RANDOM_UUID(), 40, 50, 'Planet Eta'),
+       (RANDOM_UUID(), 45, 55, 'Planet Theta'),
+       (RANDOM_UUID(), 50, 60, 'Planet Iota'),
+       (RANDOM_UUID(), 55, 65, 'Planet Kappa'),
+       (RANDOM_UUID(), 60, 70, 'Planet Lambda'),
+       (RANDOM_UUID(), 65, 75, 'Planet Mu'),
+       (RANDOM_UUID(), 70, 80, 'Planet Nu'),
+       (RANDOM_UUID(), 75, 85, 'Planet Xi'),
+       (RANDOM_UUID(), 80, 90, 'Planet Omicron'),
+       (RANDOM_UUID(), 85, 95, 'Planet Pi'),
+       (RANDOM_UUID(), 90, 100, 'Planet Rho'),
+       (RANDOM_UUID(), 95, 105, 'Planet Sigma'),
+       (RANDOM_UUID(), 100, 110, 'Planet Tau'),
+       (RANDOM_UUID(), 105, 115, 'Planet Upsilon'),
+       (RANDOM_UUID(), 110, 120, 'Planet Phi'),
+       (RANDOM_UUID(), 115, 125, 'Planet Chi'),
+       (RANDOM_UUID(), 120, 130, 'Planet Psi'),
+       (RANDOM_UUID(), 125, 135, 'Planet Omega'),
+       (RANDOM_UUID(), 130, 140, 'Planet Solaris'),
+       (RANDOM_UUID(), 135, 145, 'Planet Nova'),
+       (RANDOM_UUID(), 140, 150, 'Planet Eclipse'),
+       (RANDOM_UUID(), 145, 155, 'Planet Stardust'),
+       (RANDOM_UUID(), 150, 160, 'Planet Aurora'),
+       (RANDOM_UUID(), 155, 165, 'Planet Nebula'),
+       (RANDOM_UUID(), 160, 170, 'Planet Horizon'),
+       (RANDOM_UUID(), 165, 175, 'Planet Zenith'),
+       (RANDOM_UUID(), 170, 180, 'Planet Comet'),
+       (RANDOM_UUID(), 175, 185, 'Planet Eclipse'),
+       (RANDOM_UUID(), 180, 190, 'Planet Quasar'),
+       (RANDOM_UUID(), 185, 195, 'Planet Supernova'),
+       (RANDOM_UUID(), 190, 200, 'Planet Vortex'),
+       (RANDOM_UUID(), 195, 205, 'Planet Pulsar'),
+       (RANDOM_UUID(), 200, 210, 'Planet Meteor'),
+       (RANDOM_UUID(), 205, 215, 'Planet Cosmos'),
+       (RANDOM_UUID(), 210, 220, 'Planet Galaxy'),
+       (RANDOM_UUID(), 215, 225, 'Planet Orbit'),
+       (RANDOM_UUID(), 220, 230, 'Planet Saturn'),
+       (RANDOM_UUID(), 225, 235, 'Planet Jupiter'),
+       (RANDOM_UUID(), 230, 240, 'Planet Venus'),
+       (RANDOM_UUID(), 235, 245, 'Planet Mars'),
+       (RANDOM_UUID(), 240, 250, 'Planet Neptune'),
+       (RANDOM_UUID(), 245, 255, 'Planet Pluto'),
+       (RANDOM_UUID(), 250, 260, 'Planet Mercury'),
+       (RANDOM_UUID(), 255, 265, 'Planet Earth');
+
+-- defense table
+insert into defense (id, name, hitpoint, attack_power, cost_metal, cost_cristal, cost_deuterium, energy_consumption)
+values (RANDOM_UUID(), 'Laser Defense 1', 100, 10, 1000, 500, 0, 1),
+       (RANDOM_UUID(), 'Laser Defense 2', 200, 20, 2000, 1000, 0, 2),
+       (RANDOM_UUID(), 'Laser Defense 3', 300, 30, 3000, 1500, 0, 3),
+       (RANDOM_UUID(), 'Laser Defense 4', 400, 40, 4000, 2000, 0, 4),
+       (RANDOM_UUID(), 'Laser Defense 5', 500, 50, 5000, 2500, 0, 5);
