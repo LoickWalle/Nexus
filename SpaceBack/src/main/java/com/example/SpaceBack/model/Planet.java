@@ -30,6 +30,7 @@ public class Planet {
 
     private int coordinateY;
 
+    @ColumnDefault("'My planet'")
     @NotBlank
     @Size(max = 20)
     private String name;
